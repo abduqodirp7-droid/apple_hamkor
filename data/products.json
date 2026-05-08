@@ -1,0 +1,71 @@
+{
+  "phones": [
+    {
+      "id": 1,
+      "model": "iPhone 15 Pro Max",
+      "color": "Natural Titanium",
+      "storage": "256GB",
+      "price": 13999000,
+      "description": "A17 Pro chip. Titanium design. 48MP ProRAW camera system.",
+      "image": null,
+      "badge": "Bestseller",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "model": "iPhone 15 Pro",
+      "color": "Black Titanium",
+      "storage": "128GB",
+      "price": 11499000,
+      "description": "Pro-grade titanium. Action Button. USB-C with USB 3.",
+      "image": null,
+      "badge": "Popular",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "model": "iPhone 15",
+      "color": "Midnight",
+      "storage": "128GB",
+      "price": 9299000,
+      "description": "Dynamic Island. 48MP main camera. All-day battery life.",
+      "image": null,
+      "badge": null,
+      "featured": false
+    },
+    {
+      "id": 4,
+      "model": "iPhone 14 Pro Max",
+      "color": "Deep Purple",
+      "storage": "256GB",
+      "price": 10999000,
+      "description": "Always-On display. Dynamic Island. 48MP ProRAW.",
+      "image": null,
+      "badge": "Sale",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "model": "iPhone 14",
+      "color": "Starlight",
+      "storage": "128GB",
+      "price": 7999000,
+      "description": "Crash Detection. Emergency SOS via satellite. A15 Bionic.",
+      "image": null,
+      "badge": null,
+      "featured": false
+    },
+    {
+      "id": 6,
+      "model": "iPhone 13 Pro",
+      "color": "Sierra Blue",
+      "storage": "256GB",
+      "price": 8499000,
+      "description": "ProMotion 120Hz. Macro photography. Cinematic mode.",
+      "image": null,
+      "badge": null,
+      "featured": false
+    }
+  ],
+  "nextId": 7
+}

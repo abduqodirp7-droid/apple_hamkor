@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>apple_hamkor — Premium Smartphone Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Fallback fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+  <!-- ─── Preloader ──────────────────────────────────────────── -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <img src="/logo/logo.png" alt="apple_hamkor" onerror="this.style.display='none'; document.querySelector('.preloader-text').style.display='block'">
+        <span class="preloader-text" style="display:none">apple_hamkor</span>
+      </div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ─── Navbar ────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <!-- Replace logo.png with your actual logo file in /public/logo/ -->
+        <img src="/logo/logo.png" alt="apple_hamkor" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="logo-fallback" style="display:none">
+          <span class="logo-text">apple_hamkor</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#products" class="nav-link">Katalog</a>
+        <a href="#about" class="nav-link">Haqida</a>
+        <a href="https://t.me/Odil_122" target="_blank" class="nav-link nav-contact">Bog'lanish</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#products" class="mobile-link">Katalog</a>
+    <a href="#about" class="mobile-link">Haqida</a>
+    <a href="https://t.me/Odil_122" target="_blank" class="mobile-link">Bog'lanish</a>
+  </div>
+
+  <!-- ─── Hero Section ──────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Premium • Ishonchli • Original</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-line">apple_hamkor</span>
+        <span class="hero-title-line hero-title-sub">platformasiga</span>
+        <span class="hero-title-line hero-title-accent">xush kelibsiz</span>
+      </h1>
+      <p class="hero-desc">O'zbekistondagi eng premium Apple mahsulotlari platformasi. Sifat, ishonch va elegantlik.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">
+          <span>Katalogni Ko'rish</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://t.me/Odil_122" target="_blank" class="btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.018 9.509c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.881.712z"/></svg>
+          Telegram orqali yozish
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
+      </div>
+      <span>Pastga aylantiring</span>
+    </div>
+  </section>
+
+  <!-- ─── Stats Bar ──────────────────────────────────────────── -->
+  <section class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-number" data-count="500">0</div>
+        <div class="stat-label">Mamnun mijozlar</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="100">0</div>
+        <div class="stat-label">% Original mahsulot</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="24">0</div>
+        <div class="stat-label">Soat xizmat</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="3">0</div>
+        <div class="stat-label">Yillik tajriba</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Products Section ──────────────────────────────────── -->
+  <section class="products-section" id="products">
+    <div class="section-header">
+      <div class="section-tag">Katalog</div>
+      <h2 class="section-title">Premium Smartfonlar</h2>
+      <p class="section-desc">Har bir qurilma o'z darajasida. Sifat va elegantlikning mukammal uyg'unligi.</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">Hammasi</button>
+      <button class="filter-tab" data-filter="featured">Tanlangan</button>
+      <button class="filter-tab" data-filter="iphone15">iPhone 15</button>
+      <button class="filter-tab" data-filter="iphone14">iPhone 14</button>
+      <button class="filter-tab" data-filter="iphone13">iPhone 13</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      <!-- Populated by JS -->
+    </div>
+
+    <div class="products-empty" id="productsEmpty" style="display:none">
+      <div class="empty-icon">📱</div>
+      <p>Mahsulotlar topilmadi</p>
+    </div>
+  </section>
+
+  <!-- ─── About / Features ──────────────────────────────────── -->
+  <section class="features-section" id="about">
+    <div class="features-bg"></div>
+    <div class="section-header">
+      <div class="section-tag">Nima uchun biz?</div>
+      <h2 class="section-title">Ishonch va Sifat</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>100% Original</h3>
+        <p>Barcha mahsulotlar Apple rasmiy distribyutorlaridan keltiriladi. Hech qanday taqlid yo'q.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Tezkor Yetkazib Berish</h3>
+        <p>Toshkent bo'ylab 1-2 soat ichida yetkazib beramiz. Viloyatlarga ham xizmat ko'rsatamiz.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Qulay To'lov</h3>
+        <p>Naqd pul, bank kartasi yoki bo'lib to'lash imkoniyati mavjud. Sizga qulay usulni tanlang.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Kafolat va Qo'llab-quvvatlash</h3>
+        <p>Barcha mahsulotlarga 12 oylik kafolat va 24/7 texnik qo'llab-quvvatlash xizmati.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA Section ───────────────────────────────────────── -->
+  <section class="cta-section">
+    <div class="cta-bg">
+      <div class="cta-orb"></div>
+    </div>
+    <div class="cta-content">
+      <h2>Savolingiz bormi?</h2>
+      <p>Telegram orqali biz bilan bog'laning. Har qanday savol va buyurtmaga tayyor.</p>
+      <a href="https://t.me/Odil_122" target="_blank" class="btn-primary btn-large">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.018 9.509c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.881.712z"/></svg>
+        @Odil_122 bilan bog'lanish
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="/logo/logo.png" alt="apple_hamkor" class="footer-logo" onerror="this.style.display='none'">
+        <span class="footer-brand-name">apple_hamkor</span>
+        <p class="footer-tagline">Premium Apple mahsulotlari platformasi</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Platforma</h4>
+          <a href="#products">Katalog</a>
+          <a href="#about">Haqida</a>
+        </div>
+        <div class="footer-col">
+          <h4>Aloqa</h4>
+          <a href="https://t.me/Odil_122" target="_blank">@Odil_122</a>
+          <a href="https://t.me/Odil_122" target="_blank">Telegram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 apple_hamkor. Barcha huquqlar himoyalangan.</p>
+    </div>
+  </footer>
+
+  <!-- ─── Floating Telegram Button ──────────────────────────── -->
+  <a href="https://t.me/Odil_122" target="_blank" class="telegram-fab" title="Telegram orqali bog'laning">
+    <div class="fab-inner">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.018 9.509c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.881.712z"/></svg>
+    </div>
+    <div class="fab-pulse"></div>
+    <div class="fab-tooltip">Telegram: @Odil_122</div>
+  </a>
+
+  <!-- ─── Product Modal ─────────────────────────────────────── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

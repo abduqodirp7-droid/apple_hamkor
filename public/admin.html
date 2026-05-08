@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — apple_hamkor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+  <!-- ─── Login Screen ──────────────────────────────────────── -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-bg">
+      <div class="login-orb login-orb-1"></div>
+      <div class="login-orb login-orb-2"></div>
+    </div>
+    <div class="login-card">
+      <div class="login-logo">
+        <img src="/logo/logo.png" alt="apple_hamkor" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span style="display:none; font-size:24px; font-weight:700; color:#fff">apple_hamkor</span>
+      </div>
+      <h1 class="login-title">Admin Panel</h1>
+      <p class="login-sub">Maxfiy boshqaruv tizimi</p>
+      <div class="login-form">
+        <div class="input-group">
+          <label>Parol</label>
+          <input type="password" id="adminPassword" placeholder="Admin parolini kiriting" autocomplete="current-password">
+        </div>
+        <button class="btn-admin-primary" id="loginBtn">Kirish</button>
+        <div class="login-error" id="loginError"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Admin Dashboard ───────────────────────────────────── -->
+  <div class="admin-app" id="adminApp" style="display:none">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-logo">
+        <img src="/logo/logo.png" alt="" onerror="this.style.display='none'">
+        <div class="sidebar-brand">
+          <span class="sidebar-name">apple_hamkor</span>
+          <span class="sidebar-role">Admin Panel</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="sidebar-link active" data-view="products">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 10h16M4 14h16M4 18h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Mahsulotlar
+        </a>
+        <a href="#" class="sidebar-link" data-view="add">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m8-8H4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Yangi qo'shish
+        </a>
+        <a href="#" class="sidebar-link" data-view="stats">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Statistika
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="/" class="sidebar-link sidebar-site-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Saytga qaytish
+        </a>
+        <button class="sidebar-link sidebar-logout" id="logoutBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Chiqish
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+
+      <!-- Header -->
+      <header class="admin-header">
+        <div class="admin-header-left">
+          <h1 class="admin-page-title" id="adminPageTitle">Mahsulotlar</h1>
+        </div>
+        <div class="admin-header-right">
+          <div class="admin-status">
+            <div class="status-dot"></div>
+            <span>Online</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- ─── Products View ──── -->
+      <div class="admin-view" id="view-products">
+        <div class="admin-toolbar">
+          <div class="toolbar-stats" id="toolbarStats">
+            <span class="toolbar-count">Yuklanmoqda...</span>
+          </div>
+          <button class="btn-admin-primary btn-sm" onclick="switchView('add')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m8-8H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Yangi mahsulot
+          </button>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table" id="adminTable">
+            <thead>
+              <tr>
+                <th>Rasm</th>
+                <th>Model</th>
+                <th>Rang</th>
+                <th>Xotira</th>
+                <th>Narx</th>
+                <th>Badge</th>
+                <th>Harakatlar</th>
+              </tr>
+            </thead>
+            <tbody id="adminTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ─── Add/Edit View ──── -->
+      <div class="admin-view" id="view-add" style="display:none">
+        <div class="admin-form-card">
+          <h2 class="form-title" id="formTitle">Yangi mahsulot qo'shish</h2>
+          <form id="productForm" enctype="multipart/form-data">
+            <input type="hidden" id="editId">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Model nomi *</label>
+                <input type="text" id="fModel" placeholder="iPhone 15 Pro Max" required>
+              </div>
+              <div class="form-group">
+                <label>Rang *</label>
+                <input type="text" id="fColor" placeholder="Natural Titanium" required>
+              </div>
+              <div class="form-group">
+                <label>Xotira *</label>
+                <input type="text" id="fStorage" placeholder="256GB" required>
+              </div>
+              <div class="form-group">
+                <label>Narx (so'm) *</label>
+                <input type="number" id="fPrice" placeholder="13999000" required>
+              </div>
+              <div class="form-group">
+                <label>Badge (ixtiyoriy)</label>
+                <select id="fBadge">
+                  <option value="">Yo'q</option>
+                  <option value="Bestseller">Bestseller</option>
+                  <option value="Popular">Popular</option>
+                  <option value="Sale">Sale</option>
+                  <option value="New">New</option>
+                  <option value="Hot">Hot</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Tanlangan?</label>
+                <select id="fFeatured">
+                  <option value="false">Yo'q</option>
+                  <option value="true">Ha</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group form-full">
+              <label>Tavsif *</label>
+              <textarea id="fDesc" placeholder="Qisqacha tavsif..." rows="3" required></textarea>
+            </div>
+            <div class="form-group form-full">
+              <label>Rasm yuklash</label>
+              <div class="image-upload-zone" id="imageUploadZone">
+                <div class="upload-placeholder" id="uploadPlaceholder">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <p>Rasmni bu yerga tashlang yoki bosing</p>
+                  <span>PNG, JPG, WEBP • Max 10MB</span>
+                </div>
+                <img id="imagePreview" style="display:none; width:100%; height:200px; object-fit:contain; border-radius:12px;">
+                <input type="file" id="fImage" accept="image/*" style="display:none">
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn-admin-ghost" onclick="cancelEdit()">Bekor qilish</button>
+              <button type="submit" class="btn-admin-primary" id="submitBtn">
+                <span id="submitBtnText">Saqlash</span>
+              </button>
+            </div>
+            <div class="form-message" id="formMessage"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ─── Stats View ──── -->
+      <div class="admin-view" id="view-stats" style="display:none">
+        <div class="stats-cards" id="statsCards"></div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ─── Delete Confirm Modal ──────────────────────────────── -->
+  <div class="admin-modal-overlay" id="deleteOverlay" style="display:none">
+    <div class="admin-modal">
+      <div class="modal-icon danger">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>O'chirishni tasdiqlang</h3>
+      <p>Bu mahsulotni o'chirishni xohlaysizmi? Bu amalni ortga qaytarib bo'lmaydi.</p>
+      <div class="modal-actions">
+        <button class="btn-admin-ghost" onclick="closeDeleteModal()">Bekor qilish</button>
+        <button class="btn-admin-danger" id="confirmDeleteBtn">O'chirish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>
