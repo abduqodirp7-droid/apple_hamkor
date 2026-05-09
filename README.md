@@ -104,3 +104,4 @@ const ADMIN_PASSWORD = 'admin2024';  // Admin paroli
 ## 💡 Maslahat
 
 Parolni o'zgartirish uchun `server.js` da `ADMIN_PASSWORD` konstantasini tahrirlang.
+# apple_hamkor_premium
